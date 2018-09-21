@@ -12,6 +12,7 @@
 
     <br><br>
 
+    <%--post请求转成put请求:修改--%>
     <form action="testRest/4" method="post">
       <input type="hidden" name="_method" value="PUT"/>
       <input type="submit" value="Test Rest PUT"/>
@@ -19,6 +20,7 @@
 
     <br><br>
 
+    <%--post请求转成delete请求：删除--%>
     <form action="testRest/3" method="post">
       <input type="hidden" name="_method" value="DELETE"/>
       <input type="submit" value="Test Rest DELETE"/>
@@ -26,7 +28,7 @@
 
     <br><br>
 
-    <form action="testRest/2" method="post">
+    <form action="testRest" method="post">
       <input type="submit" value="Test Rest POST"/>
     </form>
 
