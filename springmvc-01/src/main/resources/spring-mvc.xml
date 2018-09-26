@@ -28,6 +28,19 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <!--配置视图解析器BeanNameViewResolver:使用视图的名字来解析视图-->
+    <!--通过order属性来定义视图解析器的优先级，值越小优先级越高-->
+    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="100"/>
+    </bean>
 
+    <!--配置国际化资源文件-->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="i18n"/>
+    </bean>
+
+    <!--配置直接转发的页面:直接访问页面不需要Handler-->
+    <!--使用该注解后必须添加<mvc:annotation-driven/>，否则会报404-->
+    <mvc:view-controller path="/success" view-name="success"/>
 
 </beans>
