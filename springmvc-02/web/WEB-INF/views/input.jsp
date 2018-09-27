@@ -8,6 +8,7 @@
     <title>input</title>
 </head>
 <body>
+
     <!--
         1、使用form标签：可以更快速的开发出表单页面，而且可以更方便的进行表单值的回显
         2、注意：
@@ -40,7 +41,22 @@
         <br>
         Department: <form:select path="department.id" items="${departments}" itemLabel="departName" itemValue="id"></form:select>
         <br>
+        <!--
+            1.数据类型转换
+            2.数据类型格式化
+            3.数据校验
+        -->
+
+        Birth:  <form:input path="birth"/>
+        <br>
+
         <input type="submit" value="Submit"/>
     </form:form>
+    <br><br>
+
+    <form action="testConversionServiceConverer" method="post">
+        <!--lastName-email-gender-department.id-->
+        Employee:<input type="text" name="employee"/>
+    </form>
 </body>
 </html>

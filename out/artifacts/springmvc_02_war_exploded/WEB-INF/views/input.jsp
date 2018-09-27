@@ -40,6 +40,15 @@
         <br>
         Department: <form:select path="department.id" items="${departments}" itemLabel="departName" itemValue="id"></form:select>
         <br>
+        <!--
+            1.数据类型转换
+            2.数据类型格式化
+            3.数据校验
+        -->
+        
+        Birth:  <form:input path="birth"/>
+        <br>
+
         <input type="submit" value="Submit"/>
     </form:form>
 </body>
